@@ -1,0 +1,53 @@
+:root { --bg: #0a0a0b; --text: #ffffff; --accent: #0071e3; --glass: rgba(255, 255, 255, 0.03); --border: rgba(255, 255, 255, 0.1); }
+[data-theme="light"] { --bg: #f5f5f7; --text: #1d1d1f; --accent: #0066cc; --glass: rgba(0, 0, 0, 0.02); --border: rgba(0, 0, 0, 0.1); }
+
+* { margin: 0; padding: 0; box-sizing: border-box; transition: 0.3s; }
+body { background: var(--bg); color: var(--text); font-family: 'Inter', 'Cairo', sans-serif; overflow-x: hidden; }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 25px; }
+
+.glow-bg { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: radial-gradient(circle at 50% -10%, var(--accent), transparent 40%); opacity: 0.15; z-index: -1; pointer-events: none; }
+
+.glass-nav { position: fixed; top: 20px; left: 50%; transform: translateX(-50%); width: 92%; max-width: 1100px; background: rgba(10, 10, 11, 0.75); backdrop-filter: blur(25px); border: 1px solid var(--border); border-radius: 60px; padding: 10px 35px; z-index: 1000; }
+.nav-content { display: flex; align-items: center; justify-content: space-between; }
+.nav-main { display: flex; align-items: center; gap: 40px; }
+.nav-links { display: flex; list-style: none; gap: 35px; }
+.nav-links a { text-decoration: none; color: var(--text); opacity: 0.7; font-size: 0.95rem; font-weight: 500; }
+.nav-links a:hover { opacity: 1; color: var(--accent); }
+.nav-toggles { display: flex; align-items: center; gap: 15px; border-left: 1px solid var(--border); padding-left: 15px; }
+.icon-btn { background: none; border: none; font-size: 1.2rem; cursor: pointer; color: var(--text); }
+.lang-btn { background: var(--accent); color: white; border: none; padding: 6px 16px; border-radius: 20px; cursor: pointer; font-family: inherit; font-size: 0.85rem; font-weight: 600; }
+
+.hero { height: 50vh; display: flex; align-items: center; justify-content: center; text-align: center; }
+.main-name { font-size: clamp(2.5rem, 8vw, 4.5rem); font-weight: 800; margin-bottom: 20px; letter-spacing: -2px; }
+.hero-subtitle { font-size: 1.2rem; opacity: 0.8; }
+.btn-main { background: var(--text); color: var(--bg); padding: 15px 45px; border-radius: 50px; text-decoration: none; font-weight: 600; margin-top: 25px; display: inline-block; }
+
+.section-padding { padding: 80px 0; }
+.about-grid { display: grid; grid-template-columns: 1.5fr 1fr; gap: 25px; }
+.bento-item { background: var(--glass); border: 1px solid var(--border); border-radius: 35px; padding: 35px; cursor: pointer; transition: 0.4s; }
+.bento-item:hover { transform: translateY(-7px); border-color: var(--accent); background: rgba(var(--accent), 0.05); }
+
+.custom-about-text { line-height: 1.8; font-size: 1.05rem; text-align: justify; opacity: 0.9; }
+
+.bento-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; }
+.bento-item.large { grid-column: span 2; }
+.p-icon { width: 55px; height: 55px; border-radius: 12px; margin-bottom: 15px; object-fit: cover; }
+.p-icon-placeholder { font-size: 40px; margin-bottom: 15px; }
+
+.skills-tags { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 15px; }
+.skill-tag { background: var(--border); padding: 8px 15px; border-radius: 12px; font-size: 0.85rem; }
+.cert-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+.cert-card h3 { font-size: 1.1rem; margin-bottom: 5px; color: var(--accent); }
+
+.section-title-centered { text-align: center; margin-bottom: 30px; font-size: 2rem; font-weight: 700; }
+.contact-grid { display: flex; justify-content: center; gap: 40px; font-size: 2.5rem; margin-top: 20px; }
+.contact-grid a { color: var(--text); opacity: 0.7; }
+
+.modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.88); z-index: 2000; align-items: center; justify-content: center; backdrop-filter: blur(12px); }
+.modal-card { background: var(--bg); padding: 45px; border-radius: 40px; width: 92%; max-width: 950px; border: 1px solid var(--border); position: relative; max-height: 90vh; overflow-y: auto; text-align: center; }
+.close { position: absolute; top: 15px; right: 25px; font-size: 30px; cursor: pointer; color: var(--text); opacity: 0.5; }
+.gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 25px; }
+.gallery img { width: 100%; border-radius: 18px; }
+
+[dir="rtl"] { text-align: right; }
+@media (max-width: 900px) { .nav-links { display: none; } .bento-grid, .about-grid { grid-template-columns: 1fr; } .bento-item.large { grid-column: span 1; } }

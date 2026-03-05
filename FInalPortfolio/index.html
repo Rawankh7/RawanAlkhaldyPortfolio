@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rawan AlKhaldy | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="glow-bg"></div>
+
+    <nav class="glass-nav">
+        <div class="container nav-content">
+            <div class="logo">Rawan.<span>Dev</span></div>
+            <div class="nav-main">
+                <ul class="nav-links">
+                    <li><a href="#home" data-en="Home" data-ar="الرئيسية">Home</a></li>
+                    <li><a href="#about" data-en="About" data-ar="نبذة">About</a></li>
+                    <li><a href="#projects" data-en="Projects" data-ar="المشاريع">Projects</a></li>
+                    <li><a href="#certificates" data-en="Certificates" data-ar="الشهادات">Certificates</a></li>
+                </ul>
+                <div class="nav-toggles">
+                    <button id="theme-toggle" class="icon-btn">🌓</button>
+                    <button id="lang-toggle" class="lang-btn">العربية</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header id="home" class="hero">
+        <div class="hero-inner">
+            <h1 class="main-name">Rawan AlKhaldy</h1>
+            <p class="hero-subtitle" data-en="Computer Science Student & Innovative Software Developer" data-ar="طالبة علوم حاسب ومطورة برمجيات مبتكرة">Computer Science & Innovative Software Developer</p>
+            <a href="#projects" class="btn-main" data-en="Explore My Work" data-ar="استكشف أعمالي">Explore My Work</a>
+        </div>
+    </header>
+
+    <section id="about" class="container section-padding">
+        <div class="about-grid">
+            <div class="bento-item about-card">
+                <h2 class="section-title-small" data-en="About Me" data-ar="نبذة عني">About Me</h2>
+                <p class="content-p custom-about-text" 
+                   data-en="Computer Science graduate with a strong interest in app development, web development, and artificial intelligence. Experienced in several programming languages and building practical projects across these areas. During my journey at the Apple Developer Academy, I developed both technical and professional skills, including UI design, design thinking, communication, fast learning, critical thinking, and problem-solving." 
+                   data-ar="طالبة علوم حاسب مع اهتمام قوي بتطوير التطبيقات، وتطوير الويب، والذكاء الاصطناعي. خبيرة في عدة لغات برمجة وبناء مشاريع عملية في هذه المجالات. خلال رحلتي في أكاديمية أبل للمطورين، قمت بتطوير مهارات تقنية ومهنية تشمل تصميم واجهات المستخدم، والتفكير التصميمي، والتواصل، والتعلم السريع، والتفكير النقدي، وحل المشكلات.">
+                    Computer Science graduate with a strong interest in app development, web development, and artificial intelligence. Experienced in several programming languages and building practical projects across these areas. During my journey at the Apple Developer Academy, I developed both technical and professional skills, including UI design, design thinking, communication, fast learning, critical thinking, and problem-solving.
+                </p>
+            </div>
+            
+            <div class="bento-item skills-card">
+                <h2 class="section-title-small" data-en="Technical Skills" data-ar="المهارات التقنية">Technical Skills</h2>
+                <div class="skills-tags">
+                    <span class="skill-tag">Artificial Intelligence (AI)</span>
+                    <span class="skill-tag">Swift & SwiftUI</span>
+                    <span class="skill-tag">UI/UX Design</span>
+                    <span class="skill-tag">C++ & Java</span>
+                    <span class="skill-tag">HTML5 & CSS</span>
+                    <span class="skill-tag">Web Development & NLP</span>
+                </div>
+                <h2 class="section-title-small" style="margin-top: 20px;" data-en="Soft Skills" data-ar="المهارات الناعمة">Soft Skills</h2>
+                <div class="skills-tags">
+                    <span class="skill-tag">Design Thinking</span>
+                    <span class="skill-tag">Communication</span>
+                    <span class="skill-tag">Critical Thinking</span>
+                    <span class="skill-tag">Problem-Solving</span>
+                    <span class="skill-tag">Fast Learning</span>
+                    <span class="skill-tag">Attention to Detail</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="container section-padding">
+        <h2 class="section-title" data-en="Portfolio" data-ar="المشاريع">Portfolio</h2>
+        <div class="bento-grid">
+            <div class="bento-item large" onclick="openModal('modal-codered')">
+                <img src="../assets/codered-logo.png" class="p-icon" alt="CodeRed">
+                <h3 data-en="CodeRed: AI Weapon Detection (Graduation project)" data-ar="كود ريد: كشف الأسلحة (مشروع تخرج)">CodeRed :AI Weapon Detection</h3>
+                <p data-en="Security system utilizing AI and computer vision." data-ar="نظام أمني يستخدم الذكاء الاصطناعي والرؤية الحاسوبية.">Graduation Project</p>
+            </div>
+
+            <div class="bento-item" onclick="openModal('modal-masjid')">
+                <img src="../assets/masjid-logo.png" class="p-icon" alt="Masjid App">
+                <h3 data-en="Masjid App" data-ar="تطبيق مَسجد">Masjid App</h3>
+                <p data-en="Haptic-driven Apple Watch app." data-ar="الحل المبتكر لتمكين ضعاف السمع وعامة الناس من متابعة طقوسهم الدينية من خلال تنبيهات الاهتزاز الذكية على الساعة، مع واجهات مستخدم سهلة ومبسطة.">The innovative solution to enable the hearing impaired and the general public to follow their religious rituals through smart vibration alerts on the watch, with easy and simplified user interfaces.</p>
+            </div>
+
+            <div class="bento-item" onclick="openModal('modal-masjid-web')">
+                <div class="p-icon-placeholder">🌐</div>
+                <h3 data-en="Masjid Website" data-ar="موقع تطبيق مسجد">Masjid Web</h3>
+                <p data-en="Landing page for Masjid app." data-ar="صفحة لمشروع مسجد.">Web Development</p>
+            </div>
+
+            <div class="bento-item" onclick="openModal('modal-abyan')">
+                <div class="p-icon-placeholder">💰</div>
+                <h3 data-en="Abyan: UI Enhancement" data-ar="أبيان: تحسين واجهات">Abyan Capital</h3>
+                <p data-en="UI/UX design improvements." data-ar="تحسينات تصميمية لمنصة مالية.">UI Enhancement</p>
+            </div>
+
+            <div class="bento-item" onclick="openModal('modal-speech')">
+                <div class="p-icon-placeholder">🎙️</div>
+                <h3 data-en="Speech to Text" data-ar="محول الكلام لنص">Speech to Text</h3>
+                <p data-en="Voice recognition web page." data-ar="أداة التعرف على الصوت.">Web Page</p>
+            </div>
+
+            <div class="bento-item" onclick="openModal('modal-suword')">
+                <img src="../assets/suword-icon.png" class="p-icon" alt="Suword">
+                <h3>Suword Game</h3>
+                <p data-en="Hybrid puzzle game." data-ar="لعبة ألغاز مبتكرة.">A hybrid puzzle game combining Sudoku logic and word discovery</p>
+            </div>
+
+            <div class="bento-item" onclick="openModal('modal-learning')">
+                <img src="../assets/learning-icon.png" class="p-icon" alt="Learning App">
+                <h3>Learning App</h3>
+                <p data-en="UI Implementation." data-ar="تنفيذ الواجهات الجاهزة.">UI Implementation</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="certificates" class="container section-padding">
+        <h2 class="section-title" data-en="Professional Certificates" data-ar="الشهادات المهنية">Professional Certificates</h2>
+        <div class="cert-grid">
+            <div class="bento-item cert-card"><h3>Artificial Intelligence</h3><p>IBM Skills Build</p></div>
+            <div class="bento-item cert-card"><h3>Full Stack Robotics Engineer</h3><p>Smart Methods</p></div>
+            <div class="bento-item cert-card"><h3>Robotics & AI</h3><p>Smart Methods Summer Internship</p></div>
+            <div class="bento-item cert-card"><h3>Web Development & NLP</h3><p>Smart Methods Certification</p></div>
+            <div class="bento-item cert-card"><h3>Linux System</h3><p>Smart Methods Training Center</p></div>
+            <div class="bento-item cert-card"><h3>Comprehensive Robotics Engineering</h3><p>Smart Methods</p></div>
+            <div class="bento-item cert-card"><h3>GitHub Foundations</h3><p>Smart Methods Training Center</p></div>
+            <div class="bento-item cert-card"><h3>Robot Legs Implementation</h3><p>Smart Methods Specialty</p></div>
+            <div class="bento-item cert-card"><h3>Electronics & IoT</h3><p>Smart Methods Training</p></div>
+            <div class="bento-item cert-card"><h3>Mechanical Design</h3><p>Smart Methods Training</p></div>
+            <div class="bento-item cert-card"><h3>Engineering Skills</h3><p>Smart Methods Training</p></div>
+        </div>
+    </section>
+
+    <footer id="contact" class="container section-padding">
+        <h2 class="section-title-centered" data-en="Get in Touch" data-ar="تواصل معي">Get in Touch</h2>
+        <div class="contact-grid">
+            <a href="https://www.linkedin.com/in/rawan-alkhaldi-090397309/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/Rawankh7" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="mailto:rawansalkhaldi@outlook.com"><i class="fas fa-envelope"></i></a>
+        </div>
+    </footer>
+
+    <div id="modal-codered" class="modal"><div class="modal-card"><span class="close" onclick="closeModal('modal-codered')">&times;</span><h2>CodeRed AI</h2><div class="gallery"><img src="../assets/codered-1.png"><img src="../assets/codered-2.png"></div></div></div>
+    <div id="modal-masjid" class="modal"><div class="modal-card"><span class="close" onclick="closeModal('modal-masjid')">&times;</span><h2>Masjid App</h2><div class="gallery"><img src="../assets/masjid-1.png"><img src="../assets/masjid-2.png"><img src="../assets/masjid-3.png"><img src="../assets/qibla-1.png"><img src="../assets/qibla-2.png"><img src="../assets/qibla-3.png"></div></div></div>
+    <div id="modal-masjid-web" class="modal"><div class="modal-card"><span class="close" onclick="closeModal('modal-masjid-web')">&times;</span><h2>Masjid Website</h2><div class="gallery"><img src="../assets/masjid-web-1.png"></div></div></div>
+    <div id="modal-abyan" class="modal"><div class="modal-card"><span class="close" onclick="closeModal('modal-abyan')">&times;</span><h2>Abyan Capital</h2><div class="gallery"><img src="../assets/abyan-1.png"><img src="../assets/abyan-2.png"><img src="../assets/abyan-3.png"></div></div></div>
+    <div id="modal-speech" class="modal"><div class="modal-card"><span class="close" onclick="closeModal('modal-speech')">&times;</span><h2>Speech to Text</h2><div class="gallery"><img src="../assets/speech-1.png"></div></div></div>
+    <div id="modal-suword" class="modal"><div class="modal-card"><span class="close" onclick="closeModal('modal-suword')">&times;</span><h2>Suword Game</h2><div class="gallery"><img src="../assets/suword-1.png"><img src="../assets/suword-2.png"><img src="../assets/suword-3.png"></div></div></div>
+    <div id="modal-learning" class="modal"><div class="modal-card"><span class="close" onclick="closeModal('modal-learning')">&times;</span><h2>Learning App</h2><div class="gallery"><img src="../assets/learning-1.png"><img src="../assets/learning-2.png"><img src="../assets/learning-3.png"></div></div></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
